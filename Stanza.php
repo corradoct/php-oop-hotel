@@ -21,6 +21,7 @@
     }
 
     public function setRoomNumber($room_number) {
+      var_dump($room_number);
       if (is_int($room_number)) {
         $this->room_number = $room_number;
       }
@@ -51,5 +52,7 @@
     }
 
   }
+
+
 
 ?>

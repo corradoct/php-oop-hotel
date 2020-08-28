@@ -4,7 +4,7 @@
 
   $rooms = [
     [
-      'roomNumber' => '101',
+      'roomNumber' => 101,
       'floor' => 1,
       'beds' => 1,
       'createdAt' => '01-01-2000',
@@ -40,11 +40,7 @@
       $camera = new Stanza($room['roomNumber'], $room['floor'], $room['beds'], $room['createdAt'], $room['updatedAt']);
     ?>
     <ul>
-      <li>Numero stanza : <?php try {
-        echo $camera->getRoomNumber();
-      } catch (Exception $e) {
-        echo 'Eccezione: ' . $e->getMessage();
-      } ?></li>
+      <li>Numero stanza : <?php echo $camera->getRoomNumber() ?></li>
       <li>Piano : <?php echo $camera->getFloor() ?></li>
       <li>Letti : <?php echo $camera->getBeds() ?></li>
       <li>Creata il : <?php echo $camera->created_at ?></li>
